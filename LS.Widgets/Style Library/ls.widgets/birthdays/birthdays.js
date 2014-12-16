@@ -248,7 +248,7 @@
                 }
 
                 var realDate = moment.utc(birthday);
-                var now = moment();
+                var now = moment(); 
 
                 //check to see if the user's birthday month and day match today's month and day
                 var birthdayToday = (realDate.month() == now.month() && realDate.date() == now.date());
