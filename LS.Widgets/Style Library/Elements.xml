@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Style Library">
+    <File Path="Style Library\ls.widgets\base\handlebars-helpers.js" Url="Style Library/ls.widgets/base/handlebars-helpers.js"  Type="GhostableInLibrary"/>
+    <File Path="Style Library\ls.widgets\birthdays\birthdays.js" Url="Style Library/ls.widgets/birthdays/birthdays.js" Type="GhostableInLibrary" />
+    <File Path="Style Library\ls.widgets\birthdays\birthdays.min.css" Url="Style Library/ls.widgets/birthdays/birthdays.min.css" Type="GhostableInLibrary" />
+    <File Path="Style Library\ls.widgets\base\utilities.js" Url="Style Library/ls.widgets/base/utilities.js" Type="GhostableInLibrary" />
+  </Module>
+</Elements>

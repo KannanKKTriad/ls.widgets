@@ -1,0 +1,48 @@
+﻿
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.expand-more{
+    display:inline-block;
+    clear:both;
+    cursor:pointer;
+}
+
+.more-content{
+    display:none;
+}
+
+.birthdays-container{
+
+    .birthday-item{
+        margin-bottom: 15px;
+    }
+
+    .birthday-photo{
+        float:left;
+        margin-right:2%;   
+        width:23%;
+
+        img{
+            width:100%;
+        }
+    }
+
+    .birthday-info{
+        width:75%;
+        float:left;
+
+        .happy-birthday-wish{
+            width:95%;
+        }
+    }
+
+    .more-content{
+        clear:both;
+    }
+}

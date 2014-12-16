@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{29078F52-0ACB-4AD6-8A67-604E7CBDD1BD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LS.Widgets</RootNamespace>
+    <AssemblyName>LS.Widgets</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Birthdays\Birthdays.ascx.cs">
+      <DependentUpon>Birthdays.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Birthdays\Birthdays.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Birthdays.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Anniversaries\Anniversaries.webpart" />
+    <None Include="Anniversaries\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8f14d3d8-46b1-492a-bd30-f4c771591e8b}</SharePointProjectItemId>
+    </None>
+    <None Include="Birthdays\Birthdays.webpart" />
+    <None Include="Birthdays\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4a3a7c2e-6ebc-4bd1-9bba-b5e327b71de5}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Widgets\Widgets.feature">
+      <FeatureId>{fcd52823-8748-4820-bf40-722242d243a9}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{012fe7fb-ea35-43de-9526-3e7b151fdebd}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Style Library\ls.widgets\birthdays\birthdays.less" />
+    <None Include="Style Library\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0083f5de-d3ec-4800-b733-7954abf75370}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Anniversaries\Elements.xml" />
+    <Content Include="Birthdays\Birthdays.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>Birthdays.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="Birthdays\Elements.xml" />
+    <Content Include="Features\Widgets\Widgets.Template.xml">
+      <DependentUpon>Widgets.feature</DependentUpon>
+    </Content>
+    <Content Include="Style Library\Elements.xml" />
+    <Content Include="Style Library\ls.widgets\base\handlebars-helpers.js" />
+    <Content Include="Style Library\ls.widgets\base\utilities.js" />
+    <Content Include="Style Library\ls.widgets\birthdays\birthdays.css">
+      <DependentUpon>birthdays.less</DependentUpon>
+    </Content>
+    <Content Include="Style Library\ls.widgets\birthdays\birthdays.js" />
+    <Content Include="Style Library\ls.widgets\birthdays\birthdays.min.css">
+      <DependentUpon>birthdays.less</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

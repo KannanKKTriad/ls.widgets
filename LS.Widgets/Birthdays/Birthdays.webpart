@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="LS.Widgets.Birthdays.Birthdays, $SharePoint.Project.AssemblyFullName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">Birthdays</property>
+        <property name="Description" type="string"></property>
+        <property name="ChromeType" type="chrometype">TitleOnly</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="LS.Widgets.Birthdays.Birthdays, $SharePoint.Project.AssemblyFullName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">Anniversaries</property>
+        <property name="Description" type="string"></property>
+        <property name="ChromeType" type="chrometype">TitleOnly</property>
+        <property name="WishPlaceholder" type="string">Say happy anniversary...</property>
+        <property name="NoResultsMessage" type="string">Sorry. No anniversaries upcoming.</property>
+        <property name="SearchProperty" type="string">HireDateNoYear</property>
+        <property name="ComparisonProperty" type="string">HireDate</property>
+        <property name="ComparisonMessage" type="string">years of service</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>
