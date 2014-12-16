@@ -239,7 +239,7 @@
                 }
 
                 //set the default image of the photo
-                if (!photoUrl) {
+                if (!photoUrl) { 
                     photoUrl = _spPageContextInfo.webAbsoluteUrl + '/_layouts/15/images/person.gif';
                 }
                 else {
